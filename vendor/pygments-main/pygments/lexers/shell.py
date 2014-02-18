@@ -49,12 +49,15 @@ class BashLexer(RegexLexer):
             (r'\b(if|fi|else|while|do|done|for|then|return|function|case|'
              r'select|continue|until|esac|elif)\s*\b',
              Keyword),
-            (r'\b(alias|bg|bind|break|builtin|caller|cd|command|compgen|'
-             r'complete|continue|declare|dirs|disown|echo|enable|eval|exec|'
-             r'exit|export|false|fc|fg|getopts|hash|help|history|jobs|kill|'
-             r'let|local|logout|popd|printf|pushd|pwd|read|readonly|return|set|'
-             r'shift|shopt|source|suspend|test|time|times|trap|true|type|'
-             r'typeset|ulimit|umask|unalias|unset|wait)\s*\b(?!\.)',
+            (r'\b(alias|bash|bg|bind|break|builtin|caller|cat|chmod|cd|cp|'
+             r'command|compgen|complete|ce|csh|cshs|date|dd|declare|df|dirs|'
+             r'disown|domainname|echo|ed|enable|eval|exec|expr|exit|export|'
+             r'false|fc|fg|getopts|hash|help|history|hostname|jobs|kill|ksh|'
+             r'launchctl|let|link|ln|local|logout|ls|mkdir|mv|pax|popd|printf|'
+             r'ps|pushd|pwd|rcp|read|readonly|rm|rmdir|set|sh|shift|shopt|'
+             r'sleep|source|stty|suspend|sync|tcsh|test|time|times|trap|'
+             r'true|type|typeset|ulimit|umask|unalias|unlink|unset|wait|zsh)'
+             r'\s*\b(?!\.)',
              Name.Builtin),
             (r'#.*\n', Comment),
             (r'\\[\w\W]', String.Escape),

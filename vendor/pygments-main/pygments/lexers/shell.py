@@ -50,11 +50,11 @@ class BashLexer(RegexLexer):
              r'select|continue|until|esac|elif)\s*\b',
              Keyword),
             (r'\b(alias|bg|bind|break|builtin|caller|cd|command|compgen|'
-             r'complete|declare|dirs|disown|echo|enable|eval|exec|exit|'
-             r'export|false|fc|fg|getopts|hash|help|history|jobs|kill|let|'
-             r'local|logout|popd|printf|pushd|pwd|read|readonly|set|shift|'
-             r'shopt|source|suspend|test|time|times|trap|true|type|typeset|'
-             r'ulimit|umask|unalias|unset|wait)\s*\b(?!\.)',
+             r'complete|continue|declare|dirs|disown|echo|enable|eval|exec|'
+             r'exit|export|false|fc|fg|getopts|hash|help|history|jobs|kill|'
+             r'let|local|logout|popd|printf|pushd|pwd|read|readonly|return|set|'
+             r'shift|shopt|source|suspend|test|time|times|trap|true|type|'
+             r'typeset|ulimit|umask|unalias|unset|wait)\s*\b(?!\.)',
              Name.Builtin),
             (r'#.*\n', Comment),
             (r'\\[\w\W]', String.Escape),
